@@ -39,7 +39,10 @@ public class Figura {
 	}
 
 	public int calcularPerimetro() {
-		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	public int calcularArea() {
 		return 0;
 	}
 }

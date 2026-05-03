@@ -16,4 +16,9 @@ public class Rectangulo extends Figura {
 		return 2*base+2*altura;
 	}
 	
+	@Override
+	public int calcularArea() {
+		return base*altura;
+	}
+	
 }
