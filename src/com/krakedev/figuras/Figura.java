@@ -1,9 +1,18 @@
 package com.krakedev.figuras;
 
-public class Figura {
+public abstract class Figura {
 
 	private String nombre;
 	private String color;
+	
+	//Constructor
+
+		public Figura(String nombre, String color) {
+			super();
+			this.nombre = nombre;
+			this.color = color;
+		}
+		
 
 	public String getNombre() {
 		return nombre;
@@ -26,23 +35,6 @@ public class Figura {
 		return "nombre=" + nombre + ", color=" + color;
 	}
 	
-	//Constructor
-
-	public Figura(String nombre, String color) {
-		super();
-		this.nombre = nombre;
-		this.color = color;
-	}
-	
-	public int CalcularPerimetro() {
-		return 0;
-	}
-
-	public int calcularPerimetro() {
-		return 0;
-	}
-	
-	public int calcularArea() {
-		return 0;
-	}
+	public abstract int calcularPerimetro();
+    public abstract int calcularArea();
 }

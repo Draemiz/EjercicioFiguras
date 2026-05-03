@@ -6,10 +6,6 @@ public class TrianguloRectangulo extends Figura {
 	private int catetoB;
 	private int hipotenusa;
 	
-	public TrianguloRectangulo(String nombre, String color) {
-		super(nombre,color);
-	}
-	
 	public TrianguloRectangulo(String nombre, String color, int catetoA, int catetoB) {
 		super(nombre,color);
 		this.catetoA = catetoA;
@@ -17,8 +13,12 @@ public class TrianguloRectangulo extends Figura {
 		calcularHipotenusa();
 	}
 	
+	public TrianguloRectangulo(String nombre, String color) {
+		super(nombre,color);
+	}
+	
 	private void calcularHipotenusa() {
-		double hipotenusaDouble =  Math.sqrt(catetoA^2+catetoB^2);
+		double hipotenusaDouble =  Math.sqrt((catetoA * catetoA) + (catetoB * catetoB));
 		this.hipotenusa = (int) Math.round(hipotenusaDouble);
 	}
 
